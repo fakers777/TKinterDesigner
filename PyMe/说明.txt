@@ -1,0 +1,9 @@
+PyMe.exe：PyMe启动程序
+PyMe_Admin.exe:使用管理员权限的启动程序（个别用户有启用管理员权限需要）
+UpdatePyMe.exe：更新程序，不需要启动，在PyMe中调用。
+Examples:案例
+Fonts:附带几个TTF字体
+Ico：图标
+Market_com:组件市场下载的组件
+Market_skin:皮肤市场下载的皮肤
+Wizard:放置教学向导的文件夹，通过PyMe主菜单的新手教学使用
