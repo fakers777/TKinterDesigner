@@ -1,0 +1,481 @@
+{
+    "Version": "1.0.0",
+    "UIName": "building",
+    "Description": "",
+    "WindowSize": [
+        1796,
+        900
+    ],
+    "WindowPosition": "Center",
+    "WindowHide": false,
+    "WindowResizable": true,
+    "WindowTitle": "楼盘销售管理系统",
+    "DarkMode": false,
+    "BorderWidth": 0,
+    "BorderColor": "#ffffff",
+    "DropTitle": false,
+    "DragWindow": true,
+    "ResolutionScaling": false,
+    "PopupDebugDialog": false,
+    "MinSize": [
+        0,
+        0
+    ],
+    "RootTransparency": 255,
+    "WinState": 1,
+    "BGColor": "#EFEFEF",
+    "GroupList": {},
+    "WidgetList": [
+        {
+            "Type": "Form",
+            "Index": 1,
+            "AliasName": "Form_1",
+            "BGColor": "#EFEFEF",
+            "Size": [
+                1796,
+                900
+            ],
+            "EventList": {
+                "Load": "Form_1_onLoad"
+            }
+        },
+        {
+            "Type": "Frame",
+            "Index": 7,
+            "AliasName": "Frame_1",
+            "ParentName": "Form_1",
+            "PackInfo": [
+                "x",
+                "top",
+                0,
+                0,
+                0,
+                600,
+                100
+            ],
+            "Visible": true,
+            "Size": [
+                1796,
+                100
+            ],
+            "BGColor": "#EEECD7",
+            "Relief": "flat",
+            "ScrollRegion": null
+        },
+        {
+            "Type": "Label",
+            "Index": 8,
+            "AliasName": "Label_1",
+            "ParentName": "Frame_7",
+            "PlaceInfo": [
+                384,
+                26,
+                824,
+                48,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                824,
+                48
+            ],
+            "BGColor": "#EEECD7",
+            "Text": "楼盘销售管理系统",
+            "FGColor": "#000000",
+            "Font": [
+                "宋体",
+                25,
+                "normal",
+                "roman",
+                0,
+                0
+            ]
+        },
+        {
+            "Type": "Frame",
+            "Index": 12,
+            "AliasName": "Frame_2",
+            "ParentName": "Form_1",
+            "PackInfo": [
+                "x",
+                "top",
+                0,
+                0,
+                0,
+                600,
+                50
+            ],
+            "Visible": true,
+            "Size": [
+                1796,
+                50
+            ],
+            "BGColor": "#EEECD7",
+            "Relief": "flat",
+            "ScrollRegion": null
+        },
+        {
+            "Type": "Label",
+            "Index": 19,
+            "AliasName": "Label_2",
+            "ParentName": "Frame_12",
+            "PackInfo": [
+                "y",
+                "left",
+                0,
+                0,
+                0,
+                0,
+                16
+            ],
+            "Visible": true,
+            "Size": [
+                126,
+                50
+            ],
+            "BGColor": "#EEECD7",
+            "Text": "请输入楼号",
+            "FGColor": "#000000",
+            "Font": [
+                "宋体",
+                18,
+                "normal",
+                "roman",
+                0,
+                0
+            ]
+        },
+        {
+            "Type": "Entry",
+            "Index": 20,
+            "AliasName": "Entry_1",
+            "ParentName": "Frame_12",
+            "PackInfo": [
+                "both",
+                "left",
+                0,
+                0,
+                1,
+                0,
+                0
+            ],
+            "Visible": true,
+            "Size": [
+                1670,
+                50
+            ],
+            "BGColor": "#FFFFFF",
+            "BGColor_ReadOnly": "#EFEFEF",
+            "FGColor": "#000000",
+            "Font": [
+                "Microsoft YaHei UI",
+                14,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "InnerBorderColor": "#000000",
+            "TipFGColor": "#888888",
+            "Relief": "sunken",
+            "EventList": {
+                "TextChanged": "Entry_1_onTextChanged"
+            }
+        },
+        {
+            "Type": "Frame",
+            "Index": 16,
+            "AliasName": "Frame_3",
+            "ParentName": "Form_1",
+            "PackInfo": [
+                "x",
+                "bottom",
+                0,
+                0,
+                0,
+                557,
+                160
+            ],
+            "Visible": true,
+            "Size": [
+                1796,
+                160
+            ],
+            "BGColor": "#EEECD7",
+            "Relief": "flat",
+            "ScrollRegion": null
+        },
+        {
+            "Type": "LabelButton",
+            "Index": 17,
+            "AliasName": "LabelButton_1",
+            "ParentName": "Frame_16",
+            "PlaceInfo": [
+                0.08657718120805369,
+                46,
+                160,
+                67,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                160,
+                67
+            ],
+            "Text": "楼盘录入",
+            "BGColor": "#EEECD7",
+            "FGColor": "#000000",
+            "Font": [
+                "宋体",
+                15,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "BGImage": "Resources/BTN_B_blue.png",
+            "Compound": "center",
+            "BGColor_Hover": "#227422",
+            "FGColor_Hover": "#000000",
+            "BGImage_Hover": "Resources/BTN_B_blue_hover.png",
+            "BGColor_Click": "#227422",
+            "FGColor_Click": "#FF0000",
+            "BGImage_Click": "Resources/BTN_B_blue_click.png",
+            "Droplist": false,
+            "Effect": null,
+            "EventList": {
+                "Command": "LabelButton_1_onCommand"
+            }
+        },
+        {
+            "Type": "LabelButton",
+            "Index": 21,
+            "AliasName": "LabelButton_2",
+            "ParentName": "Frame_16",
+            "PlaceInfo": [
+                0.42080536912751676,
+                46,
+                160,
+                67,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                160,
+                67
+            ],
+            "Text": "销售登记",
+            "BGColor": "#EEECD7",
+            "FGColor": "#000000",
+            "Font": [
+                "宋体",
+                15,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "BGImage": "Resources/BTN_B_yellow.png",
+            "Compound": "center",
+            "BGColor_Hover": "#227422",
+            "FGColor_Hover": "#000000",
+            "BGImage_Hover": "Resources/BTN_B_yellow_hover.png",
+            "BGColor_Click": "#227422",
+            "FGColor_Click": "#FF0000",
+            "BGImage_Click": "Resources/BTN_B_yellow_click.png",
+            "Droplist": false,
+            "Effect": null,
+            "EventList": {
+                "Command": "LabelButton_2_onCommand"
+            }
+        },
+        {
+            "Type": "LabelButton",
+            "Index": 22,
+            "AliasName": "LabelButton_3",
+            "ParentName": "Frame_16",
+            "PlaceInfo": [
+                0.7466592427616926,
+                46,
+                160,
+                67,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                160,
+                67
+            ],
+            "Text": "销售统计",
+            "BGColor": "#EEECD7",
+            "FGColor": "#000000",
+            "Font": [
+                "宋体",
+                15,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "BGImage": "Resources/BTN_B_green.png",
+            "Compound": "center",
+            "BGColor_Hover": "#227422",
+            "FGColor_Hover": "#000000",
+            "BGImage_Hover": "Resources/BTN_B_green_hover.png",
+            "BGColor_Click": "#227422",
+            "FGColor_Click": "#FF0000",
+            "BGImage_Click": "Resources/BTN_B_green_click.png",
+            "Droplist": false,
+            "Effect": null,
+            "EventList": {
+                "Command": "LabelButton_3_onCommand"
+            }
+        },
+        {
+            "Type": "ListView",
+            "Index": 15,
+            "AliasName": "ListView_1",
+            "ParentName": "Form_1",
+            "PackInfo": [
+                "both",
+                "left",
+                0,
+                0,
+                1,
+                914,
+                100
+            ],
+            "Visible": true,
+            "Size": [
+                1796,
+                590
+            ],
+            "SelectMode": "EXTENDED",
+            "RowHeight": 30,
+            "RowLine": false,
+            "ColLine": false,
+            "LineColor": "#000000",
+            "LineWidth": 1,
+            "Relief": "raised",
+            "Font": [
+                "Microsoft YaHei UI",
+                14,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "TagList": [
+                [
+                    "size",
+                    "宋体",
+                    12,
+                    "normal",
+                    "roman",
+                    0,
+                    0,
+                    "#000000"
+                ]
+            ],
+            "ColumnList": [
+                [
+                    "编号",
+                    "center",
+                    50,
+                    true
+                ],
+                [
+                    "楼号",
+                    "center",
+                    100,
+                    true
+                ],
+                [
+                    "楼层",
+                    "center",
+                    50,
+                    true
+                ],
+                [
+                    "居室",
+                    "center",
+                    50,
+                    true
+                ],
+                [
+                    "朝向",
+                    "center",
+                    50,
+                    true
+                ],
+                [
+                    "户型",
+                    "center",
+                    50,
+                    true
+                ],
+                [
+                    "面积（平方米）",
+                    "center",
+                    80,
+                    true
+                ],
+                [
+                    "售价（万元）",
+                    "center",
+                    70,
+                    true
+                ],
+                [
+                    "销售情况",
+                    "center",
+                    50,
+                    true
+                ],
+                [
+                    "销售员",
+                    "center",
+                    100,
+                    true
+                ],
+                [
+                    "销售日期",
+                    "center",
+                    100,
+                    true
+                ]
+            ],
+            "EventList": {
+                "CellClicked": "ListView_1_onCellClicked"
+            }
+        },
+        {
+            "Type": "DataBase",
+            "Index": 2,
+            "AliasName": "DataBase_2",
+            "XY": [
+                793,
+                448
+            ],
+            "ModName": "DataBase",
+            "fileormemory": null,
+            "encoding": "utf-8",
+            "datatype": "SQLITE",
+            "ip": null,
+            "port": null,
+            "user": null,
+            "password": null,
+            "database": null,
+            "elementName": null,
+            "filename": "building.db"
+        }
+    ]
+}

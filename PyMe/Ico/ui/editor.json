@@ -1,0 +1,353 @@
+{
+    "Version": "1.0.0",
+    "UIName": "Project29",
+    "Description": "",
+    "WindowSize": [
+        960,
+        640
+    ],
+    "WindowPosition": "Center",
+    "WindowHide": false,
+    "WindowResizable": true,
+    "WindowTitle": "Project29",
+    "DarkMode": false,
+    "BorderWidth": 0,
+    "BorderColor": "#ffffff",
+    "DropTitle": false,
+    "DragWindow": true,
+    "ResolutionScaling": false,
+    "PopupDebugDialog": false,
+    "MinSize": [
+        0,
+        0
+    ],
+    "RootTransparency": 255,
+    "WinState": 1,
+    "BGColor": "#ffffff",
+    "GroupList": {},
+    "WidgetList": [
+        {
+            "Type": "Form",
+            "Index": 1,
+            "AliasName": "Form_1",
+            "BGColor": "#ffffff",
+            "Size": [
+                960,
+                640
+            ],
+            "EventList": {
+                "Load": "Form_1_onLoad"
+            }
+        },
+        {
+            "Type": "Frame",
+            "Index": 2,
+            "AliasName": "Frame_1",
+            "ParentName": "Form_1",
+            "PackInfo": [
+                "x",
+                "top",
+                0,
+                0,
+                0,
+                600,
+                80
+            ],
+            "Visible": true,
+            "Size": [
+                960,
+                80
+            ],
+            "BGColor": "#ffffff",
+            "Relief": "flat",
+            "ScrollRegion": null
+        },
+        {
+            "Type": "Button",
+            "Index": 6,
+            "AliasName": "Button_1",
+            "ParentName": "Frame_2",
+            "PlaceInfo": [
+                240,
+                0,
+                80,
+                80,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                80,
+                80
+            ],
+            "BGColor": "#ffffff",
+            "ActiveBGColor": "#e95420",
+            "Text": "运行",
+            "FGColor": "#ffffff",
+            "ActiveFGColor": "#ffffff",
+            "Font": [
+                "Microsoft YaHei UI",
+                14,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "Relief": "flat"
+        },
+        {
+            "Type": "Button",
+            "Index": 7,
+            "AliasName": "Button_2",
+            "ParentName": "Frame_2",
+            "PlaceInfo": [
+                0,
+                0,
+                80,
+                80,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                80,
+                80
+            ],
+            "BGColor": "#e95420",
+            "ActiveBGColor": "#e95420",
+            "Text": "新建",
+            "FGColor": "#ffffff",
+            "ActiveFGColor": "#ffffff",
+            "Font": [
+                "Microsoft YaHei UI",
+                14,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "Relief": "flat"
+        },
+        {
+            "Type": "Button",
+            "Index": 8,
+            "AliasName": "Button_3",
+            "ParentName": "Frame_2",
+            "PlaceInfo": [
+                80,
+                -1,
+                80,
+                80,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                80,
+                80
+            ],
+            "BGColor": "#e95420",
+            "ActiveBGColor": "#e95420",
+            "Text": "打开",
+            "FGColor": "#ffffff",
+            "ActiveFGColor": "#ffffff",
+            "Font": [
+                "Microsoft YaHei UI",
+                14,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "Relief": "flat"
+        },
+        {
+            "Type": "Button",
+            "Index": 9,
+            "AliasName": "Button_4",
+            "ParentName": "Frame_2",
+            "PlaceInfo": [
+                160,
+                0,
+                80,
+                80,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                80,
+                80
+            ],
+            "BGColor": "#e95420",
+            "ActiveBGColor": "#e95420",
+            "Text": "保存",
+            "FGColor": "#ffffff",
+            "ActiveFGColor": "#ffffff",
+            "Font": [
+                "Microsoft YaHei UI",
+                14,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "Relief": "flat"
+        },
+        {
+            "Type": "Frame",
+            "Index": 3,
+            "AliasName": "Frame_2",
+            "ParentName": "Form_1",
+            "PackInfo": [
+                "both",
+                "top",
+                0,
+                0,
+                1,
+                600,
+                0
+            ],
+            "Visible": true,
+            "Size": [
+                960,
+                560
+            ],
+            "BGColor": "#ffffff",
+            "Relief": "flat",
+            "ScrollRegion": null
+        },
+        {
+            "Type": "TreeView",
+            "Index": 4,
+            "AliasName": "TreeView_1",
+            "ParentName": "Frame_3",
+            "PackInfo": [
+                "y",
+                "left",
+                0,
+                0,
+                0,
+                200,
+                1
+            ],
+            "Visible": true,
+            "Size": [
+                204,
+                560
+            ],
+            "SelectMode": "EXTENDED",
+            "RowHeight": 28,
+            "TreeItemList": [
+                [
+                    "Root",
+                    0,
+                    "",
+                    "",
+                    null,
+                    [
+                        [
+                            "Child1",
+                            1,
+                            "",
+                            "",
+                            null,
+                            []
+                        ],
+                        [
+                            "Child2",
+                            2,
+                            "",
+                            "",
+                            null,
+                            []
+                        ],
+                        [
+                            "Child3",
+                            3,
+                            "",
+                            "",
+                            null,
+                            []
+                        ]
+                    ]
+                ]
+            ],
+            "TreeExpand": true,
+            "ScrollBarList": [
+                false,
+                true
+            ]
+        },
+        {
+            "Type": "Text",
+            "Index": 5,
+            "AliasName": "Text_1",
+            "ParentName": "Frame_3",
+            "PackInfo": [
+                "both",
+                "right",
+                0,
+                0,
+                1,
+                100,
+                204
+            ],
+            "Visible": true,
+            "Size": [
+                756,
+                560
+            ],
+            "BGColor": "#ffffff",
+            "AutoWrap": true,
+            "FGColor": "#000000",
+            "Font": [
+                "Microsoft YaHei UI",
+                14,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "Relief": "flat",
+            "ScrollBarList": [
+                false,
+                true
+            ]
+        }
+    ],
+    "MainMenuIconList": [],
+    "MainMenuInfoList": [
+        [
+            "command",
+            "文件",
+            null,
+            "",
+            null,
+            null,
+            false
+        ],
+        [
+            "command",
+            "编辑",
+            null,
+            "",
+            null,
+            null,
+            false
+        ],
+        [
+            "command",
+            "帮助",
+            null,
+            "",
+            null,
+            null,
+            false
+        ]
+    ]
+}

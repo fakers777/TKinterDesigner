@@ -1,9 +1,8 @@
 name=图片橱窗
 lessonid=13
 difficulty=简单
-reward=3
+reward=0
 introduction=了解使用组件开发图片橱窗的功能。
-stepindex=13
 1=登录PyMe进入开发者商店，在“组件商店”下载“MultiPage”组件，准备三张图片1.png,2.png,3.png放到工程的Resources目录下，重新进入当前工程，从左边工具条拖动创建一个Canvas控件放到Form_1中，设置大小为800x600像素。["Create_Canvas","SetW_Canvas_1_800","SetH_Canvas_1_600"]
 2=从左边工具条的“其它”分类中点击“导入模块"，在弹出的对话框中选择MultiPage组件，导入后将MultiPage组件拖入到Form_1中。["Create_MultiPage"]
 3=选中MultiPage组件，从右上角的控件树中把树项“Canvas_1”拖动到当前“MultiPage”组件的“Canvas”属性值栏中，按Ctrl+S保存当前界面。["DragToAttribute_Canvas_Canvas_1","SaveFile_<%=ProjName%>.py"]

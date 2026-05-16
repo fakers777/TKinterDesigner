@@ -3,7 +3,6 @@ lessonid=25
 difficulty=普通
 reward=0
 introduction=了解菜单的制作方法。
-stepindex=8
 1=选中“Form_1”，双击“窗口菜单”属性，弹出的菜单编辑区对话框，在右边输入文字“文件”，快捷键选择“Ctrl+F”,点击“增加顶层菜单项”。["CreatMainMenu","AddMenuItem_文件"]
 2=选中“文件”菜单项，在右边输入文字“新建”，快捷键选择“Ctrl+N”,点击“增加子菜单项”。["AddMenuChildItem_文件_新建"]
 3=依次在“文件”菜单项下完成“打开”、“保存”、“另存为”、“退出”等子菜单项的创建。["AddMenuChildItem_文件_打开","AddMenuChildItem_文件_保存","AddMenuChildItem_文件_另存为","AddMenuChildItem_文件_退出"]

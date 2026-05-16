@@ -1,0 +1,680 @@
+{
+    "Version": "1.0.0",
+    "UIName": "FaceRecognition",
+    "Description": "",
+    "WindowSize": [
+        1223,
+        826
+    ],
+    "WindowPosition": "Center",
+    "WindowHide": false,
+    "WindowResizable": true,
+    "WindowTitle": "人脸识别程序",
+    "DarkMode": true,
+    "BorderWidth": 0,
+    "BorderColor": "#1e1e1e",
+    "DropTitle": false,
+    "DragWindow": true,
+    "ResolutionScaling": false,
+    "PopupDebugDialog": false,
+    "MinSize": [
+        0,
+        0
+    ],
+    "RootTransparency": 255,
+    "WinState": 1,
+    "BGColor": "#2d2d30",
+    "GroupList": {
+        "Group_1": "1"
+    },
+    "WidgetList": [
+        {
+            "Type": "Form",
+            "Index": 1,
+            "AliasName": "Form_1",
+            "BGColor": "#2d2d30",
+            "Size": [
+                1223,
+                826
+            ]
+        },
+        {
+            "Type": "Button",
+            "Index": 3,
+            "AliasName": "Button_3",
+            "ParentName": "Form_1",
+            "PlaceInfo": [
+                950,
+                20,
+                240,
+                50,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                240,
+                50
+            ],
+            "BGColor": "#3e3e42",
+            "ActiveBGColor": "#505054",
+            "Text": "启动摄像头",
+            "FGColor": "#ffffff",
+            "ActiveFGColor": "#ffffff",
+            "Font": [
+                "宋体",
+                14,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "RoundCorner": 5,
+            "Relief": "flat",
+            "EventList": {
+                "Command": "Button_3_onCommand"
+            }
+        },
+        {
+            "Type": "Button",
+            "Index": 5,
+            "AliasName": "Button_5",
+            "ParentName": "Form_1",
+            "PlaceInfo": [
+                950,
+                740,
+                240,
+                50,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                240,
+                50
+            ],
+            "BGColor": "#3e3e42",
+            "ActiveBGColor": "#505054",
+            "Text": "保存截图",
+            "FGColor": "#ffffff",
+            "ActiveFGColor": "#ffffff",
+            "Font": [
+                "宋体",
+                14,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "RoundCorner": 5,
+            "Relief": "flat",
+            "EventList": {
+                "Command": "Button_5_onCommand"
+            }
+        },
+        {
+            "Type": "LabelFrame",
+            "Index": 12,
+            "AliasName": "LabelFrame_12",
+            "ParentName": "Form_1",
+            "PlaceInfo": [
+                950,
+                150,
+                240,
+                570,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                240,
+                570
+            ],
+            "BGColor": "#252526",
+            "Text": "参数设置",
+            "FGColor": "#ffffff",
+            "Anchor": "nw",
+            "Font": [
+                "宋体",
+                16,
+                "bold",
+                "roman",
+                0,
+                0
+            ],
+            "Relief": "flat",
+            "ScrollRegion": null
+        },
+        {
+            "Type": "ComboBox",
+            "Index": 8,
+            "AliasName": "ComboBox_8",
+            "ParentName": "LabelFrame_12",
+            "PlaceInfo": [
+                20,
+                50,
+                200,
+                35,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                200,
+                35
+            ],
+            "BGColor": "#ffffff",
+            "FGColor": "#333333",
+            "Font": [
+                "宋体",
+                12,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "TextList": [
+                "人脸检测器",
+                "人脸检测器（快速）",
+                "人脸检测器（侧视）",
+                "眼部检测器（左眼）",
+                "眼部检测器（右眼）",
+                "身体检测器",
+                "微笑检测器"
+            ],
+            "EventList": {
+                "ComboboxSelected": "ComboBox_8_onSelect"
+            }
+        },
+        {
+            "Type": "ComboBox",
+            "Index": 22,
+            "AliasName": "ComboBox_22",
+            "ParentName": "LabelFrame_12",
+            "PlaceInfo": [
+                20,
+                120,
+                200,
+                35,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                200,
+                35
+            ],
+            "BGColor": "#ffffff",
+            "FGColor": "#333333",
+            "Font": [
+                "宋体",
+                12,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "TextList": [
+                "默认检测器",
+                "CANNY边缘检测器",
+                "只检测最大物体",
+                "只做初步检测",
+                "按比例检测"
+            ]
+        },
+        {
+            "Type": "Button",
+            "Index": 23,
+            "AliasName": "Button_23",
+            "ParentName": "LabelFrame_12",
+            "PlaceInfo": [
+                20,
+                190,
+                200,
+                35,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                200,
+                35
+            ],
+            "BGColor": "#007acc",
+            "ActiveBGColor": "#1c97ea",
+            "Text": "应用设置",
+            "FGColor": "#ffffff",
+            "ActiveFGColor": "#ffffff",
+            "Font": [
+                "宋体",
+                12,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "RoundCorner": 5,
+            "Relief": "flat",
+            "EventList": {
+                "Command": "Button_23_onCommand"
+            }
+        },
+        {
+            "Type": "Label",
+            "Index": 13,
+            "AliasName": "Label_13",
+            "ParentName": "LabelFrame_12",
+            "PlaceInfo": [
+                20,
+                20,
+                200,
+                25,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                200,
+                25
+            ],
+            "BGColor": "#252526",
+            "Text": "检测器类型",
+            "FGColor": "#ffffff",
+            "Anchor": "w",
+            "Font": [
+                "宋体",
+                12,
+                "bold",
+                "roman",
+                0,
+                0
+            ]
+        },
+        {
+            "Type": "Label",
+            "Index": 15,
+            "AliasName": "Label_15",
+            "ParentName": "LabelFrame_12",
+            "PlaceInfo": [
+                20,
+                240,
+                200,
+                25,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                200,
+                25
+            ],
+            "BGColor": "#252526",
+            "Text": "有效检测点数量",
+            "FGColor": "#ffffff",
+            "Anchor": "w",
+            "Font": [
+                "宋体",
+                12,
+                "bold",
+                "roman",
+                0,
+                0
+            ]
+        },
+        {
+            "Type": "Label",
+            "Index": 16,
+            "AliasName": "Label_16",
+            "ParentName": "LabelFrame_12",
+            "PlaceInfo": [
+                20,
+                330,
+                200,
+                25,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                200,
+                25
+            ],
+            "BGColor": "#252526",
+            "Text": "最小检测点大小",
+            "FGColor": "#ffffff",
+            "Anchor": "w",
+            "Font": [
+                "宋体",
+                12,
+                "bold",
+                "roman",
+                0,
+                0
+            ]
+        },
+        {
+            "Type": "Label",
+            "Index": 19,
+            "AliasName": "Label_19",
+            "ParentName": "LabelFrame_12",
+            "PlaceInfo": [
+                20,
+                420,
+                200,
+                25,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                200,
+                25
+            ],
+            "BGColor": "#252526",
+            "Text": "最大检测点大小",
+            "FGColor": "#ffffff",
+            "Anchor": "w",
+            "Font": [
+                "宋体",
+                12,
+                "bold",
+                "roman",
+                0,
+                0
+            ]
+        },
+        {
+            "Type": "Label",
+            "Index": 21,
+            "AliasName": "Label_21",
+            "ParentName": "LabelFrame_12",
+            "PlaceInfo": [
+                20,
+                90,
+                200,
+                25,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                200,
+                25
+            ],
+            "BGColor": "#252526",
+            "Text": "检测方式",
+            "FGColor": "#ffffff",
+            "Anchor": "w",
+            "Font": [
+                "宋体",
+                12,
+                "bold",
+                "roman",
+                0,
+                0
+            ]
+        },
+        {
+            "Type": "Scale",
+            "Index": 14,
+            "AliasName": "Scale_14",
+            "ParentName": "LabelFrame_12",
+            "PlaceInfo": [
+                20,
+                270,
+                200,
+                50,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                200,
+                50
+            ],
+            "BGColor": "#252526",
+            "FGColor": "#ffffff",
+            "Orient": "horizontal",
+            "From": 0.0,
+            "To": 10.0,
+            "ShowValue": 1,
+            "Length": 200,
+            "Value": 0,
+            "BigIncrement": 1.0,
+            "Tickinterval": 3.0,
+            "Resolution": 1.0,
+            "EventList": {
+                "Command": "Scale_14_onCommand"
+            }
+        },
+        {
+            "Type": "Scale",
+            "Index": 17,
+            "AliasName": "Scale_17",
+            "ParentName": "LabelFrame_12",
+            "PlaceInfo": [
+                20,
+                360,
+                200,
+                50,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                200,
+                50
+            ],
+            "BGColor": "#252526",
+            "FGColor": "#ffffff",
+            "Orient": "horizontal",
+            "From": 0.0,
+            "To": 200.0,
+            "ShowValue": 1,
+            "Length": 200,
+            "Value": 0,
+            "BigIncrement": 1.0,
+            "Tickinterval": 40.0,
+            "Resolution": 10.0,
+            "EventList": {
+                "Command": "Scale_17_onCommand"
+            }
+        },
+        {
+            "Type": "Scale",
+            "Index": 18,
+            "AliasName": "Scale_18",
+            "ParentName": "LabelFrame_12",
+            "PlaceInfo": [
+                20,
+                450,
+                200,
+                50,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                200,
+                50
+            ],
+            "BGColor": "#252526",
+            "FGColor": "#ffffff",
+            "Orient": "horizontal",
+            "From": 0.0,
+            "To": 200.0,
+            "ShowValue": 1,
+            "Length": 200,
+            "Value": 0,
+            "BigIncrement": 1.0,
+            "Tickinterval": 40.0,
+            "Resolution": 10.0,
+            "EventList": {
+                "Command": "Scale_18_onCommand"
+            }
+        },
+        {
+            "Type": "CheckButton",
+            "Index": 7,
+            "AliasName": "CheckButton_7",
+            "ParentName": "LabelFrame_12",
+            "PlaceInfo": [
+                20,
+                520,
+                200,
+                30,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                200,
+                30
+            ],
+            "Value": false,
+            "BGColor": "#252526",
+            "ActiveBGColor": "#3e3e42",
+            "Text": "启用实时检测",
+            "FGColor": "#ffffff",
+            "ActiveFGColor": "#ffffff",
+            "Anchor": "w",
+            "Font": [
+                "宋体",
+                12,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "SelectColor": "#007acc",
+            "SelectBGColor": "#3e3e42",
+            "SelectFGColor": "#ffffff",
+            "Relief": "flat",
+            "EventList": {
+                "Command": "CheckButton_7_onCommand"
+            }
+        },
+        {
+            "Type": "LabelFrame",
+            "Index": 24,
+            "AliasName": "LabelFrame_24",
+            "ParentName": "Form_1",
+            "PlaceInfo": [
+                20,
+                20,
+                900,
+                780,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                900,
+                780
+            ],
+            "BGColor": "#252526",
+            "Text": "",
+            "FGColor": "#ffffff",
+            "Anchor": "nw",
+            "Font": [
+                "宋体",
+                14,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "Relief": "flat",
+            "ScrollRegion": null
+        },
+        {
+            "Type": "Canvas",
+            "Index": 2,
+            "AliasName": "Canvas_2",
+            "ParentName": "LabelFrame_24",
+            "PlaceInfo": [
+                10,
+                10,
+                880,
+                760,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                880,
+                760
+            ],
+            "BGColor": "#1e1e1e",
+            "Relief": "flat",
+            "ScrollRegion": null
+        },
+        {
+            "Type": "Button",
+            "Index": 25,
+            "AliasName": "Button_25",
+            "ParentName": "Form_1",
+            "PlaceInfo": [
+                950,
+                90,
+                240,
+                50,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                240,
+                50
+            ],
+            "BGColor": "#007acc",
+            "ActiveBGColor": "#1c97ea",
+            "Text": "使用人物图片",
+            "FGColor": "#ffffff",
+            "ActiveFGColor": "#ffffff",
+            "Font": [
+                "宋体",
+                14,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "RoundCorner": 5,
+            "Relief": "flat",
+            "EventList": {
+                "Command": "Button_25_onCommand"
+            }
+        },
+        {
+            "Type": "VideoCapture",
+            "Index": 6,
+            "AliasName": "VideoCapture_6",
+            "XY": [
+                798,
+                780
+            ],
+            "ModName": "VideoCapture",
+            "elementName": "Canvas_2",
+            "uiName": "uiName"
+        }
+    ]
+}

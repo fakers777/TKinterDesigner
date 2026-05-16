@@ -3,7 +3,6 @@ lessonid=19
 difficulty=简单
 reward=3
 introduction=了解如何开发一个全屏效果的管理系统登录界面。
-stepindex=19
 1=选中Form_1，在右边属性栏设置窗口大小为1600x1000。["SetSize_Form1_1600x1000"]
 2=选中Form_1，在属性栏中双击“图片”项，找到PyMe的Ico目录下的“System.png”设置为当前背景图片，并设置“最大化窗口”为True，保存一下当前文件。["SetImage_System.png","ShowMaxUI","SaveFile_<%=ProjName%>.py"]
 3=在文件与资源栏里用鼠标右键单击，在弹出菜单里创建新窗口“Login”。["Create_UI_Login"]

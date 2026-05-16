@@ -3,7 +3,6 @@ lessonid=14
 difficulty=困难
 reward=3
 introduction=了解数据编辑器和数据表相关控件的用法。
-stepindex=40
 1=选中Form_1，在右边属性栏设置窗口大小为1200x800。["SetSize_Form1_1200x800"]
 2=从左边工具条拖动创建一个ListView控件到Form_1上部，宽度可修改为100%,高底调整到600像素。["Create_ListView","SetW_ListView_1_1.00","SetH_ListView_1_600"]
 3=用鼠标右键单击ListView，在弹出菜单里选择“编辑列信息”，然后在弹出菜单里将列数据改为“编号”,“名称”、“性别”、“职业”和“婚姻”，并调整合适宽度。["SetColumn_['编号','名称','性别','职业','婚姻']"]

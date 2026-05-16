@@ -1,0 +1,356 @@
+{
+    "Version": "1.0.0",
+    "UIName": "仿微信",
+    "Description": "",
+    "WindowSize": [
+        960,
+        640
+    ],
+    "WindowPosition": "Center",
+    "WindowHide": false,
+    "WindowResizable": true,
+    "WindowTitle": "仿微信",
+    "DarkMode": false,
+    "BorderWidth": 0,
+    "BorderColor": "#ffffff",
+    "DropTitle": false,
+    "DragWindow": true,
+    "ResolutionScaling": false,
+    "PopupDebugDialog": false,
+    "MinSize": [
+        0,
+        0
+    ],
+    "RootTransparency": 255,
+    "WinState": 1,
+    "BGColor": "#F5F5F5",
+    "GroupList": {},
+    "WidgetList": [
+        {
+            "Type": "Form",
+            "Index": 1,
+            "AliasName": "Form_1",
+            "BGColor": "#F5F5F5",
+            "Size": [
+                960,
+                640
+            ],
+            "EventList": {
+                "Load": "Form_1_onLoad"
+            }
+        },
+        {
+            "Type": "Frame",
+            "Index": 2,
+            "AliasName": "Frame_1",
+            "ParentName": "Form_1",
+            "PlaceInfo": [
+                0,
+                0,
+                80,
+                640,
+                "nw",
+                true,
+                true
+            ],
+            "Visible": true,
+            "Size": [
+                80,
+                640
+            ],
+            "BGColor": "#2E3440",
+            "Relief": "flat",
+            "ScrollRegion": null
+        },
+        {
+            "Type": "LabelButton",
+            "Index": 8,
+            "AliasName": "LabelButton_1",
+            "ParentName": "Frame_2",
+            "PlaceInfo": [
+                10,
+                10,
+                60,
+                60,
+                "nw",
+                true,
+                true
+            ],
+            "Visible": true,
+            "Size": [
+                60,
+                60
+            ],
+            "Text": "",
+            "BGColor": "#F5F5F5",
+            "FGColor": "#000000",
+            "Font": [
+                "宋体",
+                14,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "BGImage": "Resources/头像.png",
+            "Compound": "center",
+            "BGColor_Hover": "#4C566A",
+            "FGColor_Hover": "#FFFFFF",
+            "BGColor_Click": "#3B4252",
+            "FGColor_Click": "#FF0000",
+            "Droplist": false,
+            "Effect": null
+        },
+        {
+            "Type": "LabelButton",
+            "Index": 9,
+            "AliasName": "LabelButton_2",
+            "ParentName": "Frame_2",
+            "PlaceInfo": [
+                10,
+                80,
+                60,
+                60,
+                "nw",
+                true,
+                true
+            ],
+            "Visible": true,
+            "Size": [
+                60,
+                60
+            ],
+            "Text": "",
+            "BGColor": "#F5F5F5",
+            "FGColor": "#000000",
+            "Font": [
+                "宋体",
+                14,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "BGImage": "Resources/ICO_PC.png",
+            "Compound": "center",
+            "BGColor_Hover": "#4C566A",
+            "FGColor_Hover": "#FFFFFF",
+            "BGColor_Click": "#3B4252",
+            "FGColor_Click": "#FF0000",
+            "Droplist": false,
+            "Effect": null,
+            "EventList": {
+                "Command": "LabelButton_2_onCommand"
+            }
+        },
+        {
+            "Type": "LabelButton",
+            "Index": 10,
+            "AliasName": "LabelButton_3",
+            "ParentName": "Frame_2",
+            "PlaceInfo": [
+                10,
+                150,
+                60,
+                60,
+                "nw",
+                true,
+                true
+            ],
+            "Visible": true,
+            "Size": [
+                60,
+                60
+            ],
+            "Text": "",
+            "BGColor": "#F5F5F5",
+            "FGColor": "#000000",
+            "Font": [
+                "宋体",
+                14,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "BGImage": "Resources/ICO_Team.png",
+            "Compound": "center",
+            "BGColor_Hover": "#4C566A",
+            "FGColor_Hover": "#FFFFFF",
+            "BGColor_Click": "#3B4252",
+            "FGColor_Click": "#FF0000",
+            "Droplist": false,
+            "Effect": null,
+            "EventList": {
+                "Command": "LabelButton_3_onCommand"
+            }
+        },
+        {
+            "Type": "LabelButton",
+            "Index": 11,
+            "AliasName": "LabelButton_4",
+            "ParentName": "Frame_2",
+            "PlaceInfo": [
+                10,
+                220,
+                60,
+                60,
+                "nw",
+                true,
+                true
+            ],
+            "Visible": true,
+            "Size": [
+                60,
+                60
+            ],
+            "Text": "",
+            "BGColor": "#F5F5F5",
+            "FGColor": "#000000",
+            "Font": [
+                "宋体",
+                14,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "BGImage": "Resources/ICO_Setup.png",
+            "Compound": "center",
+            "BGColor_Hover": "#4C566A",
+            "FGColor_Hover": "#FFFFFF",
+            "BGColor_Click": "#3B4252",
+            "FGColor_Click": "#FF0000",
+            "Droplist": false,
+            "Effect": null,
+            "EventList": {
+                "Command": "LabelButton_4_onCommand"
+            }
+        },
+        {
+            "Type": "Frame",
+            "Index": 6,
+            "AliasName": "Frame_2",
+            "ParentName": "Form_1",
+            "PlaceInfo": [
+                80,
+                80,
+                250,
+                560,
+                "nw",
+                true,
+                true
+            ],
+            "Visible": true,
+            "Size": [
+                250,
+                560
+            ],
+            "BGColor": "#E5E9F0",
+            "Relief": "flat",
+            "ScrollRegion": null
+        },
+        {
+            "Type": "Frame",
+            "Index": 7,
+            "AliasName": "Frame_3",
+            "ParentName": "Form_1",
+            "PlaceInfo": [
+                330,
+                0,
+                630,
+                640,
+                "nw",
+                true,
+                true
+            ],
+            "Visible": true,
+            "Size": [
+                630,
+                640
+            ],
+            "BGColor": "#ECEFF4",
+            "Relief": "flat",
+            "ScrollRegion": null
+        },
+        {
+            "Type": "Entry",
+            "Index": 4,
+            "AliasName": "Entry_1",
+            "ParentName": "Form_1",
+            "PlaceInfo": [
+                85,
+                20,
+                185,
+                40,
+                "nw",
+                true,
+                true
+            ],
+            "Visible": true,
+            "Size": [
+                185,
+                40
+            ],
+            "BGColor": "#FFFFFF",
+            "BGColor_ReadOnly": "#F5F5F5",
+            "FGColor": "#2E3440",
+            "Font": [
+                "宋体",
+                14,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "InnerBorderColor": "#D8DEE9",
+            "TipText": "搜索",
+            "TipFGColor": "#888888",
+            "Relief": "flat",
+            "RoundCorner": 20,
+            "EventList": {
+                "Return": "Entry_1_onReturn"
+            }
+        },
+        {
+            "Type": "Button",
+            "Index": 12,
+            "AliasName": "Button_1",
+            "ParentName": "Form_1",
+            "PlaceInfo": [
+                280,
+                20,
+                40,
+                40,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                40,
+                40
+            ],
+            "BGColor": "#5E81AC",
+            "ActiveBGColor": "#4C566A",
+            "Text": "",
+            "FGColor": "#FFFFFF",
+            "ActiveFGColor": "#FFFFFF",
+            "Font": [
+                "宋体",
+                14,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "BGImage": "Resources/搜索.png",
+            "Compound": "center",
+            "RoundCorner": 20,
+            "Relief": "flat",
+            "EventList": {
+                "Command": "Button_1_onCommand"
+            }
+        }
+    ]
+}

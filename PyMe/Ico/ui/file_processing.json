@@ -1,0 +1,231 @@
+{
+    "Version": "1.0.0",
+    "UIName": "Project23",
+    "Description": "",
+    "WindowSize": [
+        968,
+        640
+    ],
+    "WindowPosition": "Center",
+    "WindowHide": false,
+    "WindowResizable": true,
+    "WindowTitle": "Project23",
+    "DarkMode": false,
+    "BorderWidth": 0,
+    "BorderColor": "#ffffff",
+    "DropTitle": false,
+    "DragWindow": true,
+    "ResolutionScaling": false,
+    "PopupDebugDialog": false,
+    "MinSize": [
+        0,
+        0
+    ],
+    "RootTransparency": 255,
+    "WinState": 1,
+    "BGColor": "#f8f9fa",
+    "GroupList": {},
+    "WidgetList": [
+        {
+            "Type": "Form",
+            "Index": 1,
+            "AliasName": "Form_1",
+            "BGColor": "#f8f9fa",
+            "Size": [
+                968,
+                640
+            ],
+            "EventList": {
+                "Load": "Form_1_onLoad"
+            }
+        },
+        {
+            "Type": "Label",
+            "Index": 2,
+            "AliasName": "Label_1",
+            "ParentName": "Form_1",
+            "PlaceInfo": [
+                12,
+                30,
+                100,
+                48,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                100,
+                48
+            ],
+            "BGColor": "#f8f9fa",
+            "Text": "文件",
+            "FGColor": "#495057",
+            "Font": [
+                "Microsoft YaHei UI",
+                14,
+                "normal",
+                "roman",
+                0,
+                0
+            ]
+        },
+        {
+            "Type": "Entry",
+            "Index": 3,
+            "AliasName": "Entry_1",
+            "ParentName": "Form_1",
+            "PlaceInfo": [
+                115,
+                31,
+                585,
+                46,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                585,
+                46
+            ],
+            "BGColor": "#FFFFFF",
+            "BGColor_ReadOnly": "#f8f9fa",
+            "FGColor": "#000000",
+            "Font": [
+                "Microsoft YaHei UI",
+                14,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "InnerBorderColor": "#000000",
+            "TipFGColor": "#888888",
+            "Relief": "sunken"
+        },
+        {
+            "Type": "Button",
+            "Index": 4,
+            "AliasName": "Button_1",
+            "ParentName": "Form_1",
+            "PlaceInfo": [
+                707,
+                29,
+                120,
+                48,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                120,
+                48
+            ],
+            "BGColor": "#6c757d",
+            "ActiveBGColor": "#5c636a",
+            "Text": "打开",
+            "FGColor": "#ffffff",
+            "ActiveFGColor": "#ffffff",
+            "Font": [
+                "Microsoft YaHei UI",
+                14,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "Relief": "flat"
+        },
+        {
+            "Type": "Button",
+            "Index": 5,
+            "AliasName": "Button_2",
+            "ParentName": "Form_1",
+            "PlaceInfo": [
+                838,
+                29,
+                120,
+                48,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                120,
+                48
+            ],
+            "BGColor": "#6c757d",
+            "ActiveBGColor": "#5c636a",
+            "Text": "处理",
+            "FGColor": "#ffffff",
+            "ActiveFGColor": "#ffffff",
+            "Font": [
+                "Microsoft YaHei UI",
+                14,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "Relief": "flat"
+        },
+        {
+            "Type": "Text",
+            "Index": 6,
+            "AliasName": "Text_1",
+            "ParentName": "Form_1",
+            "PlaceInfo": [
+                12,
+                88,
+                946,
+                506,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                946,
+                506
+            ],
+            "BGColor": "#FFFFFF",
+            "AutoWrap": true,
+            "Font": [
+                "Microsoft YaHei UI",
+                14,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "Relief": "flat"
+        },
+        {
+            "Type": "Progress",
+            "Index": 7,
+            "AliasName": "Progress_1",
+            "ParentName": "Form_1",
+            "PlaceInfo": [
+                9,
+                611,
+                949,
+                20,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                949,
+                20
+            ],
+            "Orient": "horizontal",
+            "Mode": "determinate",
+            "MaxValue": 100,
+            "Value": 50
+        }
+    ]
+}

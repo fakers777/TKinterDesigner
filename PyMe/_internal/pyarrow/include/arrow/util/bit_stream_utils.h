@@ -108,39 +108,34 @@ class BitWriter {
   int bit_offset_;   // Offset in buffered_values_
 };
 
-namespace detail {
-
-inline uint64_t ReadLittleEndianWord(const uint8_t* buffer, int bytes_remaining) {
-  uint64_t le_value = 0;
-  if (ARROW_PREDICT_TRUE(bytes_remaining >= 8)) {
-    memcpy(&le_value, buffer, 8);
-  } else {
-    memcpy(&le_value, buffer, bytes_remaining);
-  }
-  return arrow::bit_util::FromLittleEndian(le_value);
-}
-
-}  // namespace detail
-
 /// Utility class to read bit/byte stream.  This class can read bits or bytes
 /// that are either byte aligned or not.  It also has utilities to read multiple
 /// bytes in one read (e.g. encoded int).
 class BitReader {
  public:
-  BitReader() = default;
-
   /// 'buffer' is the buffer to read from.  The buffer's length is 'buffer_len'.
-  BitReader(const uint8_t* buffer, int buffer_len) : BitReader() {
-    Reset(buffer, buffer_len);
+  BitReader(const uint8_t* buffer, int buffer_len)
+      : buffer_(buffer), max_bytes_(buffer_len), byte_offset_(0), bit_offset_(0) {
+    int num_bytes = std::min(8, max_bytes_ - byte_offset_);
+    memcpy(&buffered_values_, buffer_ + byte_offset_, num_bytes);
+    buffered_values_ = arrow::bit_util::FromLittleEndian(buffered_values_);
   }
+
+  BitReader()
+      : buffer_(NULL),
+        max_bytes_(0),
+        buffered_values_(0),
+        byte_offset_(0),
+        bit_offset_(0) {}
 
   void Reset(const uint8_t* buffer, int buffer_len) {
     buffer_ = buffer;
     max_bytes_ = buffer_len;
     byte_offset_ = 0;
     bit_offset_ = 0;
-    buffered_values_ =
-        detail::ReadLittleEndianWord(buffer_ + byte_offset_, max_bytes_ - byte_offset_);
+    int num_bytes = std::min(8, max_bytes_ - byte_offset_);
+    memcpy(&buffered_values_, buffer_ + byte_offset_, num_bytes);
+    buffered_values_ = arrow::bit_util::FromLittleEndian(buffered_values_);
   }
 
   /// Gets the next value from the buffer.  Returns true if 'v' could be read or false if
@@ -183,7 +178,7 @@ class BitReader {
 
   /// Returns the number of bytes left in the stream, not including the current
   /// byte (i.e., there may be an additional fraction of a byte).
-  int bytes_left() const {
+  int bytes_left() {
     return max_bytes_ -
            (byte_offset_ + static_cast<int>(bit_util::BytesForBits(bit_offset_)));
   }
@@ -265,6 +260,16 @@ inline bool BitWriter::PutAligned(T val, int num_bytes) {
 
 namespace detail {
 
+inline void ResetBufferedValues_(const uint8_t* buffer, int byte_offset,
+                                 int bytes_remaining, uint64_t* buffered_values) {
+  if (ARROW_PREDICT_TRUE(bytes_remaining >= 8)) {
+    memcpy(buffered_values, buffer + byte_offset, 8);
+  } else {
+    memcpy(buffered_values, buffer + byte_offset, bytes_remaining);
+  }
+  *buffered_values = arrow::bit_util::FromLittleEndian(*buffered_values);
+}
+
 template <typename T>
 inline void GetValue_(int num_bits, T* v, int max_bytes, const uint8_t* buffer,
                       int* bit_offset, int* byte_offset, uint64_t* buffered_values) {
@@ -282,8 +287,7 @@ inline void GetValue_(int num_bits, T* v, int max_bytes, const uint8_t* buffer,
     *byte_offset += 8;
     *bit_offset -= 64;
 
-    *buffered_values =
-        detail::ReadLittleEndianWord(buffer + *byte_offset, max_bytes - *byte_offset);
+    ResetBufferedValues_(buffer, *byte_offset, max_bytes - *byte_offset, buffered_values);
 #ifdef _MSC_VER
 #pragma warning(push)
 #pragma warning(disable : 4800 4805)
@@ -380,8 +384,8 @@ inline int BitReader::GetBatch(int num_bits, T* v, int batch_size) {
     }
   }
 
-  buffered_values =
-      detail::ReadLittleEndianWord(buffer + byte_offset, max_bytes - byte_offset);
+  detail::ResetBufferedValues_(buffer, byte_offset, max_bytes - byte_offset,
+                               &buffered_values);
 
   for (; i < batch_size; ++i) {
     detail::GetValue_(num_bits, &v[i], max_bytes, buffer, &bit_offset, &byte_offset,
@@ -421,8 +425,8 @@ inline bool BitReader::GetAligned(int num_bytes, T* v) {
   byte_offset_ += num_bytes;
 
   bit_offset_ = 0;
-  buffered_values_ =
-      detail::ReadLittleEndianWord(buffer_ + byte_offset_, max_bytes_ - byte_offset_);
+  detail::ResetBufferedValues_(buffer_, byte_offset_, max_bytes_ - byte_offset_,
+                               &buffered_values_);
   return true;
 }
 
@@ -434,8 +438,8 @@ inline bool BitReader::Advance(int64_t num_bits) {
   }
   byte_offset_ += static_cast<int>(bits_required >> 3);
   bit_offset_ = static_cast<int>(bits_required & 7);
-  buffered_values_ =
-      detail::ReadLittleEndianWord(buffer_ + byte_offset_, max_bytes_ - byte_offset_);
+  detail::ResetBufferedValues_(buffer_, byte_offset_, max_bytes_ - byte_offset_,
+                               &buffered_values_);
   return true;
 }
 

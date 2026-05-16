@@ -1,0 +1,218 @@
+{
+    "Version": "1.0.0",
+    "UIName": "Project27",
+    "Description": "",
+    "WindowSize": [
+        960,
+        640
+    ],
+    "WindowPosition": "Center",
+    "WindowHide": false,
+    "WindowResizable": true,
+    "WindowTitle": "Project27",
+    "DarkMode": false,
+    "BorderWidth": 0,
+    "BorderColor": "#ffffff",
+    "DropTitle": false,
+    "DragWindow": true,
+    "ResolutionScaling": false,
+    "PopupDebugDialog": false,
+    "MinSize": [
+        0,
+        0
+    ],
+    "RootTransparency": 255,
+    "WinState": 1,
+    "BGColor": "#002b36",
+    "GroupList": {},
+    "WidgetList": [
+        {
+            "Type": "Form",
+            "Index": 1,
+            "AliasName": "Form_1",
+            "BGColor": "#002b36",
+            "Size": [
+                960,
+                640
+            ],
+            "EventList": {
+                "Load": "Form_1_onLoad"
+            }
+        },
+        {
+            "Type": "Frame",
+            "Index": 2,
+            "AliasName": "Frame_1",
+            "ParentName": "Form_1",
+            "PackInfo": [
+                "x",
+                "top",
+                0,
+                0,
+                0,
+                600,
+                80
+            ],
+            "Visible": true,
+            "Size": [
+                960,
+                80
+            ],
+            "BGColor": "#002b36",
+            "Relief": "flat",
+            "ScrollRegion": null
+        },
+        {
+            "Type": "Label",
+            "Index": 4,
+            "AliasName": "Label_1",
+            "ParentName": "Frame_2",
+            "PlaceInfo": [
+                16,
+                17,
+                100,
+                48,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                100,
+                48
+            ],
+            "BGColor": "#002b36",
+            "Text": "文件",
+            "FGColor": "#ffffff",
+            "Font": [
+                "Microsoft YaHei UI",
+                14,
+                "normal",
+                "roman",
+                0,
+                0
+            ]
+        },
+        {
+            "Type": "Entry",
+            "Index": 5,
+            "AliasName": "Entry_1",
+            "ParentName": "Frame_2",
+            "PlaceInfo": [
+                133,
+                17,
+                674,
+                48,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                674,
+                48
+            ],
+            "BGColor": "#002b36",
+            "BGColor_ReadOnly": "#f8f9fa",
+            "FGColor": "#ffffff",
+            "Font": [
+                "Microsoft YaHei UI",
+                14,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "InnerBorderColor": "#000000",
+            "TipFGColor": "#888888",
+            "Relief": "sunken"
+        },
+        {
+            "Type": "Button",
+            "Index": 6,
+            "AliasName": "Button_1",
+            "ParentName": "Frame_2",
+            "PlaceInfo": [
+                830,
+                15,
+                120,
+                48,
+                "nw",
+                true,
+                false
+            ],
+            "Visible": true,
+            "Size": [
+                120,
+                48
+            ],
+            "BGColor": "#002b36",
+            "ActiveBGColor": "#bc951a",
+            "Text": "Button",
+            "FGColor": "#ffffff",
+            "ActiveFGColor": "#ffffff",
+            "Font": [
+                "Microsoft YaHei UI",
+                14,
+                "normal",
+                "roman",
+                0,
+                0
+            ],
+            "Relief": "flat"
+        },
+        {
+            "Type": "Frame",
+            "Index": 3,
+            "AliasName": "Frame_2",
+            "ParentName": "Form_1",
+            "PackInfo": [
+                "both",
+                "top",
+                0,
+                0,
+                1,
+                600,
+                80
+            ],
+            "Visible": true,
+            "Size": [
+                960,
+                560
+            ],
+            "BGColor": "#002b36",
+            "Relief": "flat",
+            "ScrollRegion": null
+        },
+        {
+            "Type": "Bar",
+            "Index": 8,
+            "AliasName": "Bar_1",
+            "ParentName": "Frame_3",
+            "PackInfo": [
+                "both",
+                "top",
+                0,
+                0,
+                1,
+                240,
+                80
+            ],
+            "Visible": true,
+            "Size": [
+                960,
+                560
+            ],
+            "Title": "",
+            "XLabel": "",
+            "YLabel": "",
+            "ExternalBG": "#FFFFFF",
+            "InternalBG": "#EAEAF2",
+            "Color": "#4C72B0",
+            "Marker": "",
+            "EventList": {
+                "LoadData": "Bar_1_onLoadData"
+            }
+        }
+    ]
+}

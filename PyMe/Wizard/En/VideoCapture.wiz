@@ -3,7 +3,6 @@ lessonid=26
 difficulty=Simple
 reward=0
 introduction=Understand the function of developing video capture using components.
-stepindex=0
 1=Drag from the left toolbar to create a Canvas control and place it in Form_1, with a size of 800x600 pixels.["Create_Canvas","SetW_Canvas_1_800","SetH_Canvas_1_600"]
 2=Find the "VideoCapture" component from the "Other" category on the left toolbar and drag it into Form_1.["Create_VideoCapture"]
 3=Select the VideoCapture component, drag the tree item "Canvas_1" from the control tree in the upper right corner to the "Canvas" property value bar of the current "VideoCapture" component, and press Ctrl+S to save the current interface.["DragToAttribute_VideoCapture_Canvas_1","SaveFile_<%=ProjName%>.py"]

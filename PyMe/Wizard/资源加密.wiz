@@ -3,7 +3,6 @@ lessonid=24
 difficulty=简单
 reward=0
 introduction=掌握资源加密和解密的方法（需要VIP会员账号）。
-stepindex=5
 1=在底部的文件资源栏进入到“Resources”目录，鼠标右键单击空白处，选择弹出菜单项“导入文件”，查找PyMe的Ico目录下的“welcome.png”导入到“Resources”目录。["Import_Resources"]
 2=在图片文件上右键单击，在弹出的菜单中单击“生成加密文件”,使用密码加密，并输入密匙“1111”，生成图片的加密文件。["Encrypt_welcome.png"]
 3=从左侧工具条拖动创建一个Label，双击右边属性栏的“图片”属性，查找“Resources”目录下的“welcome.png”，将图片设置为背景图片。["Create_Label","SetImage_welcome.png"]
